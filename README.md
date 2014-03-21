@@ -9,7 +9,7 @@ inspired / copied from a java implementation:
 ## Usage
 
 ```
-(require [clj-iso-7064.core :refer :all])
+(require [clj-iso7064.core :refer :all])
 
 (checksum (mod-97-10) "794")
 ;; "44"

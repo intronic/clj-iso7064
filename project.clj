@@ -1,5 +1,7 @@
 (defproject clj-iso7064 "0.1.0"
+
   :description "Partial Clojure implementation of iso7064 Pure Systems."
+
   :url "https://github.com/intronic/clj-iso7064"
   :license {:name "LGPL 3.0 (GNU Lesser General Public License)"
             :url "https://www.gnu.org/licenses/lgpl.html"}
@@ -15,6 +17,9 @@
                                   [org.clojure/tools.trace "0.7.8"]]}}
 
   ;; :global-vars {*warn-on-reflection* true}
+
+  :lein-release {:deploy-via :clojars
+                 :scm :git}
 
   :scm {:name "git" :url "https://github.com/intronic/clj-iso7064"
         :tag ""})

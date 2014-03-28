@@ -1,4 +1,4 @@
-(defproject clj-iso7064 "0.1.2-SNAPSHOT"
+(defproject clj-iso7064 "0.1.3"
 
   :description "Partial Clojure implementation of iso7064 Pure Systems."
 
@@ -16,10 +16,10 @@
                                   [org.clojure/java.classpath "0.2.2"]
                                   [org.clojure/tools.trace "0.7.8"]]}}
 
-  ;; :global-vars {*warn-on-reflection* true}
-
   :lein-release {:deploy-via :clojars
                  :scm :git}
 
   :scm {:name "git" :url "https://github.com/intronic/clj-iso7064"
-        :tag ""})
+        :tag ""}
+
+  :global-vars {*warn-on-reflection* true})

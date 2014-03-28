@@ -40,7 +40,7 @@
     (str s delim (checksum this s)))
 
   (strip [this s]
-    (subs s 0 (- (count s) 2)))
+    (subs s 0 (- (count s) 2 (count delim))))
 
   (verify [this s]
     (.endsWith (or ^String s "") ^String (checksum this (strip this s)))))

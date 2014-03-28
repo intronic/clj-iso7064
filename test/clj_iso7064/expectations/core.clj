@@ -17,17 +17,23 @@
 
 (expect "79444"    (compute (mod-97-10) "794"))
 (expect "794-44"    (compute (mod-97-10 "-") "794"))
+(expect "794 44"    (compute (mod-97-10 " ") "794"))
 (expect "10757107" (compute (mod-97-10) "107571"))
 
 (expect "794"  (strip (mod-97-10) "79444"))
+(expect "794"  (strip (mod-97-10 "-") "794-44"))
+(expect "794"  (strip (mod-97-10 " ") "794 44"))
 (expect "1075" (strip (mod-97-10) "107571"))
 
 (expect true  (verify (mod-97-10) "79444"))
+(expect true  (verify (mod-97-10 "-") "794-44"))
+(expect true  (verify (mod-97-10 " ") "794 44"))
 (expect false (verify (mod-97-10) "79445"))
 
 (expect true  (verify (mod-97-10) "10757107"))
 (expect false (verify (mod-97-10) "10757108"))
 
+(expect "794"    (strip (mod-97-10 "-") (compute (mod-97-10 "-") "794")))
 
 (expect "3W" (checksum (mod-1271-36) "ISO79"))
 (expect "3W" (checksum (mod-1271-36) "iso79"))

@@ -1,4 +1,4 @@
-(defproject clj-iso7064 "0.1.1"
+(defproject clj-iso7064 "0.1.2-SNAPSHOT"
 
   :description "Partial Clojure implementation of iso7064 Pure Systems."
 
